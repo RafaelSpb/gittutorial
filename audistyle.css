@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css?family=Anton');
+
+*{
+box-sizing:border-box;
+transition: 1s;
+/*outline: 1px solid black;*/
+}
+
+body {
+  margin: 0;
+}
+
+body .h1 {
+	width: 200px;
+	text-align: center;
+	font-family: 'Anton', Helvetica, sans-serif; 
+	font-weight: 400;
+
+}
+
+.container {
+margin: 0 auto;
+width: 90%;
+max-width: 960px;
+min-width: 300px;
+height: auto;
+display: flex;
+justify-content: space-between;
+}
+
+.test {
+width: 80%;
+height: auto;
+text-align: left;
+padding: 10px;
+margin-top: 10px;
+margin-left: 5px;
+}
+
+h1 {
+	text-align-last: center;
+	text-transform: uppercase;
+	color: red;
+	-webkit-animation: zagolovok 1s infinite;
+}
+
+.test-1 {
+	background: lightgreen;
+}
+
+.test-2 {
+	background: lightyellow;
+}
+
+.test-3 {
+	background: coral;
+}
+
+.container-text {
+	max-width: 960px;
+	width: 90%;
+	height: auto;
+	margin: 0 auto;
+}
+
+.container-text img {
+	width: 50%;
+	height: auto;
+	float: left;
+}
+
+.trio {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	width: 70%;
+	text-align-last: center;
+	margin: 0 auto;
+}
+
+.trio img {
+	width: 33%;
+	height: auto;
+}
+
+h2 {
+	text-align: center;
+}
+h2 a {
+	text-transform: uppercase;
+}
+
+@media screen and (max-width: 760px) {
+	.container {
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		height: auto;
+		margin: auto;
+	}
+
+	.container-text {
+		text-align: center;
+	}
+	.container-text p {
+		text-align: left;
+	}
+	.container-text img {
+		float: none;
+		width: 90%;
+	}
+
+	.trio {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.trio img {
+		width: 100%;
+		height: auto;
+	}
+}
+
+@-webkit-keyframes zagolovok {
+	0% {margin-left: 5px;}
+	50% {margin-left: 15px;}
+	100% {margin-left: 0;}
+}
