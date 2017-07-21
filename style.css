@@ -1,0 +1,150 @@
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+ul,
+ol {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.header {
+	width: 100%;
+	height: 100px;
+	background: #ccc;
+}
+
+.container {
+	width: 960px;
+	margin: 0 auto;
+}
+
+.nav {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.nav a {
+	display: block;
+	padding: 15px 30px 15px 30px;
+	background: #000;
+	border: 1px solid pink;
+	border-radius: 5px;
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	box-sizing: border-box;
+	box-shadow: 1px 1px 1px 1px pink;
+}
+
+.nav a:hover {
+	background: pink;
+	color: #000;
+}
+
+.nav li {
+	position: relative;
+	-webkit-transition: .3s;
+	-o-transition: .3s;
+	transition: .3s;
+}
+
+.drop-nav {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	display: flex;
+	flex-direction: column;
+	visibility: hidden;
+	opacity: 0;
+}
+
+.drop-nav a {
+		padding-left: 5px;
+		text-transform: none;
+}
+
+.nav li:hover .drop-nav {
+	visibility: visible; 
+	opacity: 1;
+	transition: .3s;
+}
+
+.drop2-nav {
+	position: absolute;
+	top: 5px;
+	left: 100%;
+	display: flex;
+	flex-direction: column;
+	visibility: hidden;
+	opacity: 0;
+}
+
+.drop2-nav a {
+	background: pink;
+	box-shadow: 1px 4px 20px 3px rgba(255, 0, 0, 0.42);
+	color: #000;
+}
+
+.drop-nav li:hover .drop2-nav {
+	visibility: visible; 
+	opacity: 1;
+	transition: .3s;
+}
+
+.drop2-nav li {
+	position: relative;
+
+}
+
+.drop3-nav {
+	position: absolute;
+	top: 0;
+	left: 100%;
+	display: flex;
+	flex-direction: column;
+	visibility: hidden;
+	opacity: 0;
+}
+
+.drop3-nav a {
+	background-color: lightgreen;
+}
+
+.drop2-nav li:hover .drop3-nav {
+	visibility: visible; 
+	opacity: 1;
+	transition: .3s;
+}
+
+.drop3-nav li {
+	position: relative;
+}
+
+.drop4-nav {
+	position: absolute;
+	top: 0;
+	right: 100%;
+	display: flex;
+	flex-direction: column;
+	visibility: hidden;
+	opacity: 0;
+}
+
+.drop3-nav li:hover .drop4-nav {
+	visibility: visible; 
+	opacity: 1;
+	transition: .3s;
+}
+
+.drop4-nav a {
+	background-color: lightblue;
+}
