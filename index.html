@@ -1,76 +1,112 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>flexbox</title>
 	<link rel="stylesheet" href="style.css">
+	<!-- <link rel="stylesheet" href="flexbox.css"> -->
 </head>
 <body>
-<header class="header">
-	<div class="header-inner"></div>
-		<div class="container">
-			<ul class="nav">
-				<li><a href="https://google.com">бабаев</a>
-					<ul class="drop-nav">
-						<li><a href="">рафаэль</a>
-							<ul class="drop2-nav">
-								<li><a href="#">тахирович</a></li>
-								<li><a href="#">item3</a></li>
-								<li><a href="#">item3</a>
-									<ul class="drop3-nav">
-										<li><a href="#">item4</a></li>
-										<li><a href="#">йошкинfdfот</a></li>
-										<li><a href="#">item5</a>
-											<ul class="drop4-nav">
-												<li><a href="#">васечкин</a></li>
-												<li><a href="#">иванов</a></li>
-												<li><a href="#">петров</a></li>
-											</ul>
-										</li>
-									</ul>
-								</li>
-							</ul>
-						</li>
-						<li><a href="#">item2</a>
-							<ul class="drop2-nav">
-								<li><a href="#">item3</a></li>
-								<li><a href="#">кобальтинович</a></li>
-								<li><a href="#">item3</a></li>
-							</ul>
-						</li>
-						<li><a href="#">item2</a></li>
-					</ul>
-				</li>
+<div class="menu-container">
+	<ul>
+		<li><a href="#">item1</a></li>
+		<li><a href="#">item1</a>
+			<ul class="drop-menu">
+				<li><a href="#">item1</a></li>
+				<li><a href="#">item1</a></li>
 				<li><a href="#">item1</a>
-					<ul class="drop-nav">
+					<ul class="drop2">
 						<li><a href="#">item2</a></li>
 						<li><a href="#">item2</a></li>
 						<li><a href="#">item2</a></li>
 					</ul>
-				</li>
-				<li><a href="#">item1</a>
-				<ul class="drop-nav">
-						<li><a href="#">item2</a></li>
-						<li><a href="#">item2</a></li>
-						<li><a href="#">item2</a></li>
-					</ul>
-				</li>
-				<li><a href="#">item1</a>
-					<ul class="drop-nav">
-						<li><a href="#">item2</a></li>
-						<li><a href="#">item2</a></li>
-						<li><a href="#">item2</a></li>
-					</ul>
-				</li>
-				<li><a href="#">item1</a>
-					<ul class="drop-nav">
-						<li><a href="#">item2</a></li>
-						<li><a href="#">item2</a></li>
-						<li><a href="#">item2</a></li>
-					</ul>
-				</li>
+			</li>
 			</ul>
-		</header>
-	</div>
+		</li>
+		<li><a href="#">item1</a></li>
+		<li><a href="#">item1</a></li>
+		<li><a href="#">item1</a></li>
+	</ul>			
+</div>
+<div class="modul-menu">
+	<ul>
+		<li><a href="#">item</a></li>
+		<li><a href="#">item</a></li>
+		<li><a href="#">item</a>
+			<ul class="drop-modul">
+				<li><a href="#">item2</a></li>
+				<li><a href="#">item2</a></li>
+				<li><a href="#">item2</a></li>
+			</ul>
+		</li>
+		<li><a href="#">item</a></li>
+		<li><a href="#">item</a></li>
+	</ul>
+</div>
+
+<form action = "/signup" method = "POST">
+	<p>
+		<label>Обращение</label>
+			<label>
+					<input type = "radio" name = "title" value = "mr">
+					Г-н
+			</label>
+	</p>
+	<p>
+		<label>Обращение</label>
+			<label>
+					<input type = "radio" name = "title" value = "mrs">
+					Г-жа
+			</label>
+	</p>
+	<p>
+		<label>Имя:</label>
+			<input type = "text" name = "first_name" placeholder = "введите ваше имя">
+	</p>
+	<p>
+		<label>Фамилия:</label>
+			<input type = "text" name = "last_name" placeholder = "введите вашу фамилию">
+	</p>
+	<p>
+		<label>e-mail:</label>
+			<input type = "email" name = "email" placeholder = "email">
+	</p>
+	<p>
+		<label>телефон:</label>
+			<input type = "tel" name = "phone" placeholder = "number">
+	</p>
+	<p>
+		<label>пароль:</label>
+			<input type = "password" name = "password" placeholder = "password">
+	</p>
+	
+	<p>
+		<label>Подтвердите пароль:</label>
+			<input type = "password" name = "password-_confirm">
+	</p>
+	
+	<p>
+	<label>Страна</label>
+		<select name = "country">
+			<option>Выбрать</option>
+			<option>Канада</option>
+			<option>Франция</option>
+			<option>Россия</option>
+			<option>Америка</option>
+			<option>Индия</option>
+		</select>
+	</p>
+	<p>
+	<label>
+		<input type = "checkbox" name = "terms">
+	я согласен с <a href="/terms"> условиями использования</a>
+	</label>
+	</p>
+	<p>
+	<button>
+		зарегистрироваться
+		</button>
+	</p>
+</form>
 </body>
 </html>

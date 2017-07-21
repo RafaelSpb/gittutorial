@@ -1,150 +1,126 @@
-
-* {
-	box-sizing: border-box;
-}
-
 body {
+	width: 100%;
+	height: 100%;
 	margin: 0;
 	padding: 0;
 }
 
 ul,
 ol {
-	list-style-type: none;
-	margin: 0;
+	list-style: none;
 	padding: 0;
+	margin: 0;
 }
 
-.header {
-	width: 100%;
-	height: 100px;
-	background: #ccc;
-}
-
-.container {
-	width: 960px;
-	margin: 0 auto;
-}
-
-.nav {
+.menu-container ul {
 	display: flex;
 	flex-direction: row;
-	flex-wrap: wrap;
+	justify-content: center;
 }
 
-.nav a {
+.menu-container li {
+	background-color: #c6c7c8;
+	position: relative;
+}
+
+.menu-container a {
 	display: block;
-	padding: 15px 30px 15px 30px;
-	background: #000;
+	padding: 15px 20px;
 	border: 1px solid pink;
-	border-radius: 5px;
-	color: #fff;
 	text-decoration: none;
 	text-transform: uppercase;
 	box-sizing: border-box;
-	box-shadow: 1px 1px 1px 1px pink;
+	font-family: Verdana, sans-serif;
+	font-size: 12px;
 }
 
-.nav a:hover {
-	background: pink;
-	color: #000;
-}
-
-.nav li {
-	position: relative;
-	-webkit-transition: .3s;
-	-o-transition: .3s;
-	transition: .3s;
-}
-
-.drop-nav {
+ul .drop-menu {
 	position: absolute;
 	top: 100%;
 	left: 0;
+}
+
+ul .drop-menu {
 	display: flex;
 	flex-direction: column;
 	visibility: hidden;
 	opacity: 0;
 }
 
-.drop-nav a {
-		padding-left: 5px;
-		text-transform: none;
-}
-
-.nav li:hover .drop-nav {
-	visibility: visible; 
+.menu-container li:hover .drop-menu {
+	visibility: visible;
 	opacity: 1;
-	transition: .3s;
+	transition: 1s;
 }
 
-.drop2-nav {
-	position: absolute;
-	top: 5px;
-	left: 100%;
-	display: flex;
-	flex-direction: column;
-	visibility: hidden;
-	opacity: 0;
-}
-
-.drop2-nav a {
-	background: pink;
-	box-shadow: 1px 4px 20px 3px rgba(255, 0, 0, 0.42);
-	color: #000;
-}
-
-.drop-nav li:hover .drop2-nav {
-	visibility: visible; 
-	opacity: 1;
-	transition: .3s;
-}
-
-.drop2-nav li {
-	position: relative;
-
-}
-
-.drop3-nav {
-	position: absolute;
-	top: 0;
-	left: 100%;
-	display: flex;
-	flex-direction: column;
-	visibility: hidden;
-	opacity: 0;
-}
-
-.drop3-nav a {
-	background-color: lightgreen;
-}
-
-.drop2-nav li:hover .drop3-nav {
-	visibility: visible; 
-	opacity: 1;
-	transition: .3s;
-}
-
-.drop3-nav li {
+.drop-menu li {
 	position: relative;
 }
 
-.drop4-nav {
+.drop2 {
 	position: absolute;
+	margin-left: 100%;
 	top: 0;
-	right: 100%;
+}
+
+ul .drop2 {
 	display: flex;
 	flex-direction: column;
 	visibility: hidden;
 	opacity: 0;
+	transition: 1s;
 }
 
-.drop3-nav li:hover .drop4-nav {
-	visibility: visible; 
+ul .drop-menu li:hover .drop2 {
+	visibility: visible;
 	opacity: 1;
-	transition: .3s;
 }
 
-.drop4-nav a {
-	background-color: lightblue;
+.modul-menu {
+	background-color: greenyellow;
+	display: flex;
+	justify-content: flex-start;
 }
+
+.modul-menu ul {
+	display: flex;
+	flex-direction: column;
+	
+}
+
+.modul-menu a {
+	text-decoration: none;
+	padding: 15px 50px;
+	display: block;
+	background-color: brown;
+	border: 1px solid violet;
+	text-transform: uppercase;
+	color: white;
+}
+
+.modul-menu a:hover {
+	box-shadow: 1px 2px 7px 3px black;
+}
+
+.modul-menu li {
+	position: relative;
+}
+
+.drop-modul {
+	position: absolute;
+	top: 0;
+	left: 100%;
+}
+
+.drop-modul {
+	visibility: hidden;
+	opacity: 0;
+}
+
+.modul-menu li:hover .drop-modul {
+	visibility: visible;
+	opacity: 1;
+	transition: 1s;
+}
+
+
